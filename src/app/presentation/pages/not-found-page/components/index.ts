@@ -1,4 +1,4 @@
-import {NotFoundPageComponent} from "./not-found-page/not-found-page.component";
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 export const components = [
   NotFoundPageComponent,

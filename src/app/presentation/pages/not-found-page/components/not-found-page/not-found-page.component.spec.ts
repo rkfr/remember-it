@@ -9,7 +9,7 @@ describe('NotFoundPageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotFoundPageComponent ],
+      declarations: [NotFoundPageComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
