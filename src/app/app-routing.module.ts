@@ -3,13 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
-    loadChildren: () => import("./presentation/pages/main-page/main-page.module").then(m => m.MainPageModule),
+    path: '',
+    loadChildren: () => import('./presentation/pages/main-page/main-page.module').then(m => m.MainPageModule),
     pathMatch: 'full',
   },
   {
-    path: "**",
-    loadChildren: () => import("./presentation/pages/not-found-page/not-found-page.module").then(m => m.NotFoundPageModule),
+    path: '**',
+    loadChildren: () => import('./presentation/pages/not-found-page/not-found-page.module').then(m => m.NotFoundPageModule),
   },
 ];
 

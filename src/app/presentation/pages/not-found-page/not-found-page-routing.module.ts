@@ -1,10 +1,10 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
-import {NotFoundPageComponent} from "./components";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { NotFoundPageComponent } from './components';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: NotFoundPageComponent,
   },
 ];
