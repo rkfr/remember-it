@@ -91,6 +91,7 @@
         "@typescript-eslint/prefer-readonly": "error",
         "@typescript-eslint/no-extraneous-class": "off",
         "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/unbound-method": "off",
         "quotes": [
           "error",
           "single",
