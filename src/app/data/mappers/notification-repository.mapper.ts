@@ -22,10 +22,10 @@ export class NotificationRepositoryMapper extends Mapper<NotificationEntity, Not
   }
 
   public mapFromList(param: NotificationEntity[]): NotificationModel[] {
-    return param.map(this.mapFrom);
+    return param.map((entity: NotificationEntity) => this.mapFrom(entity));
   }
 
   public mapToList(param: NotificationModel[]): NotificationEntity[] {
-    return param.map(this.mapTo);
+    return param.map((notification: NotificationModel) => this.mapTo(notification));
   }
 }

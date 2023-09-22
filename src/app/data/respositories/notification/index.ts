@@ -1,1 +1,1 @@
-export * from './notification-local-storage.repository';
+export * from './notification-local.repository';

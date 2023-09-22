@@ -4,3 +4,8 @@ export interface NotificationModel {
   body: string;
   duration: number;
 }
+
+export interface NotificationUpdateParams {
+  id: string,
+  data: Partial<NotificationModel>,
+}

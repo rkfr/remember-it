@@ -1,3 +1,11 @@
 <p>
   main-page works!
 </p>
+
+<ul *ngIf="list$ | async as list">
+  <pre>{{ list | json }}</pre>
+
+  <li *ngFor="let item of list">
+    {{ item.title }}
+  </li>
+</ul>
