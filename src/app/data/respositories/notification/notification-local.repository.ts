@@ -1,5 +1,5 @@
 import { NotificationRepository } from '../../../core/domain/repositories';
-import { BehaviorSubject, map, MonoTypeOperatorFunction, Observable, pipe, tap } from 'rxjs';
+import {BehaviorSubject, map, MonoTypeOperatorFunction, Observable, pipe, take, tap} from 'rxjs';
 import { NotificationModel } from '../../../core/domain/models';
 import { NotificationLocalStorageHelper } from './notification-local-storage.helper';
 
@@ -54,6 +54,7 @@ export class NotificationLocalRepository extends NotificationRepository {
       tap((list: NotificationModel[]) => {
         this.listSubject$.next(list);
       }),
+      take(1),
     );
   }
 }

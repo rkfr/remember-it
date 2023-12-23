@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GetNotificationsListUseCase } from '../../../../../core/domain/usecases';
+import { CreateNotificationItemUseCase, GetNotificationsListUseCase } from '../../../../../core/domain/usecases';
 
 @Component({
   selector: 'ri-main-page',
@@ -8,9 +8,19 @@ import { GetNotificationsListUseCase } from '../../../../../core/domain/usecases
 })
 export class MainPageComponent {
   constructor(
-    private readonly getAllNotificationsUseCase: GetNotificationsListUseCase
+    private readonly getAllNotifications: GetNotificationsListUseCase,
+    private readonly createNotification: CreateNotificationItemUseCase,
   ) {
   }
 
-  public list$ = this.getAllNotificationsUseCase.execute();
+  public list$ = this.getAllNotifications.execute();
+
+  public addItem(): void {
+    this.createNotification.execute({
+      id: `${Date.now()}-#3`,
+      duration: 12340,
+      body: 'yeaaah hoorey!',
+      title: 'I\'ve just created item'
+    }).subscribe();
+  }
 }

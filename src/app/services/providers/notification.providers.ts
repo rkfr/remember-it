@@ -1,7 +1,8 @@
 import { NotificationRepository } from '../../core/domain/repositories';
 import { NotificationLocalRepository } from '../../data/respositories';
 import {
-  CreateNotificationItemUseCase, DeleteNotificationItemUseCase,
+  CreateNotificationItemUseCase,
+  DeleteNotificationItemUseCase,
   GetNotificationsListUseCase,
   UpdateNotificationItemUsCase
 } from '../../core/domain/usecases';
@@ -19,7 +20,7 @@ const GetNotificationsListUseCaseProvider: FactoryProvider = {
 };
 
 const CreateNotificationItemUseCaseProvider: FactoryProvider = {
-  provide: UpdateNotificationItemUsCase,
+  provide: CreateNotificationItemUseCase,
   deps: [NotificationRepository],
   useFactory: (repository: NotificationRepository) => new CreateNotificationItemUseCase(repository),
 }
@@ -31,7 +32,7 @@ const UpdateNotificationItemUseCaseProvider: FactoryProvider = {
 }
 
 const DeleteNotificationItemUseCaseProvider: FactoryProvider = {
-  provide: UpdateNotificationItemUsCase,
+  provide: DeleteNotificationItemUseCase,
   deps: [NotificationRepository],
   useFactory: (repository: NotificationRepository) => new DeleteNotificationItemUseCase(repository),
 }
