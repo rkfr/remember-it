@@ -1,11 +1,11 @@
-import { NotificationRepository } from '../../core/domain/repositories';
+import { NotificationRepository } from '../../core';
 import { NotificationLocalRepository } from '../../data/respositories';
 import {
   CreateNotificationItemUseCase,
   DeleteNotificationItemUseCase,
   GetNotificationsListUseCase,
   UpdateNotificationItemUsCase
-} from '../../core/domain/usecases';
+} from '../../core';
 import { ClassProvider, FactoryProvider, Provider } from '@angular/core';
 
 const NotificationRepositoryProvider: ClassProvider = {
